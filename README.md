@@ -2,6 +2,10 @@
 
 A bright dark syntax theme for Atom.
 
+[![Travis](https://img.shields.io/travis/pvdlg/atom-bright-dark-syntax.svg)](https://travis-ci.org/pvdlg/atom-bright-dark-syntax)
+[![Greenkeeper badge](https://badges.greenkeeper.io/pvdlg/atom-bright-dark-syntax.svg)](https://greenkeeper.io/)
+[![license](https://img.shields.io/github/license/pvdlg/atom-bright-dark-syntax.svg)](https://github.com/pvdlg/atom-bright-dark-syntax/blob/master/LICENSE)
+
 ## JavaScript
 
 ![javascript](media/javascript.png?raw=true)
