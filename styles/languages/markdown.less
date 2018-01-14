@@ -1,0 +1,30 @@
+.syntax--md {
+	&.syntax--list {
+		& > .syntax--punctuation:first-child {
+			color: @syntax-color-markup-list;
+		}
+	}
+
+	&.syntax--table.syntax--storage {
+		color: @syntax-text-color;
+
+		.syntax--punctuation {
+			color: @syntax-color-markup-table-border;
+		}
+	}
+
+	&.syntax--link {
+		&.syntax--string {
+			color: @syntax-color-markup-link;
+
+			.syntax--punctuation {
+				color: @syntax-text-color;
+			}
+		}
+
+		&.syntax--uri {
+			color: @syntax-color-markup-link-url;
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,104 @@
+/* stylelint-disable selector-type-no-unknown */
+
+atom-text-editor {
+	color: @syntax-text-color;
+	background-color: @syntax-background-color;
+
+	.invisible-character {
+		color: @syntax-invisible-character-color;
+	}
+
+	.indent-guide {
+		color: @syntax-indent-guide-color;
+	}
+
+	.wrap-guide {
+		background-color: @syntax-wrap-guide-color;
+	}
+
+	.gutter {
+		color: @syntax-gutter-text-color;
+		background-color: @syntax-gutter-background-color;
+
+		.line-number {
+			color: @syntax-gutter-text-color;
+			-webkit-font-smoothing: antialiased;
+
+			&.cursor-line {
+				color: @syntax-gutter-text-color-selected;
+				background-color: @syntax-gutter-background-color-selected;
+				font-weight: bold;
+			}
+
+			&.cursor-line-no-selection {
+				color: @syntax-gutter-text-color-selected;
+				background-color: transparent;
+				font-weight: bold;
+			}
+
+			.icon-right {
+				color: @syntax-text-color;
+			}
+		}
+
+		&:not(.git-diff-icon) .line-number.git-line-removed {
+			&.git-line-removed::before {
+				bottom: -3px;
+			}
+
+			&::after {
+				width: 25px;
+				border-bottom: 1px dotted fade(@syntax-color-removed, 50%);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				pointer-events: none;
+				content: '';
+			}
+		}
+	}
+
+	.gutter .line-number.folded,
+	.gutter .line-number::after,
+	.fold-marker::after {
+		color: @syntax-gutter-text-color-folded;
+		font-weight: bold;
+	}
+
+	.invisible {
+		color: @syntax-text-color;
+	}
+
+	.cursor {
+		// color: @syntax-cursor-color;
+		// From github-dark
+		border-left: 2px solid @syntax-cursor-color;
+	}
+
+	.selection .region {
+		background-color: @syntax-selection-color;
+	}
+
+	.bracket-matcher .region {
+		box-sizing: border-box;
+		// TODO variable + change
+		border-bottom: 1px solid #f8de7e;
+		opacity: 0.7;
+		z-index: 1;
+	}
+
+	.search-results .syntax--marker {
+		.region {
+			border: 1px solid @syntax-result-marker-color;
+			background-color: transparent;
+		}
+
+		&.current-result .region {
+			border: 1px solid @syntax-result-marker-color-selected;
+		}
+	}
+}
+
+atom-text-editor[mini] .scroll-view {
+	padding-left: 1px;
+}

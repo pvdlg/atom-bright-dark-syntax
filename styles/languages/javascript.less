@@ -1,0 +1,70 @@
+/* stylelint-disable declaration-no-important, selector-max-class */
+
+.syntax--js.syntax--string {
+	.syntax--entity.syntax--name.syntax--tag {
+		color: @syntax-color-function-call !important;
+	}
+}
+
+.syntax--source.syntax--js {
+	color: @syntax-color-variable;
+
+	.syntax--punctuation.syntax--definition.syntax--string {
+		color: @syntax-color-string !important;
+	}
+
+	.syntax--regexp .syntax--punctuation.syntax--definition.syntax--string {
+		color: @syntax-color-regex-definition !important;
+	}
+
+	.syntax--punctuation:not(.syntax--jsdoc):not(.syntax--comment),
+	.syntax--delimiter,
+	.syntax--comma,
+	.syntax--bracket:not(.syntax--jsdoc),
+	.syntax--brace:not(.syntax--jsdoc) {
+		color: @syntax-color-punctuation;
+	}
+
+	.syntax--operator {
+		color: @syntax-color-keyword-operator;
+	}
+
+	.syntax--getter,
+	.syntax--setter {
+		color: @syntax-color-function;
+	}
+
+	.syntax--quasi.syntax--punctuation {
+		&.syntax--begin,
+		&.syntax--end {
+			color: @syntax-color-string !important;
+		}
+	}
+
+	.syntax--quasi.syntax--punctuation:not(.syntax--begin):not(.syntax--end),
+	.syntax--embedded.syntax--section.syntax--punctuation {
+		color: @syntax-color-interpolation !important;
+	}
+
+	.syntax--module .syntax--js {
+		color: @syntax-color-support !important;
+	}
+}
+
+.syntax--object.syntax--key {
+	.syntax--string {
+		color: @syntax-color-variable;
+
+		&.syntax--quoted {
+			color: @syntax-color-string;
+		}
+	}
+}
+
+.syntax--jsdoc {
+	font-style: normal;
+
+	&.syntax--definition.syntax--tag {
+		color: @syntax-color-storage;
+	}
+}

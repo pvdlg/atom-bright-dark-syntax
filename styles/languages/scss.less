@@ -1,0 +1,29 @@
+/* stylelint-disable selector-max-class */
+
+.syntax--scss.syntax--entity.syntax--function,
+.syntax--scss.syntax--support.syntax--function {
+	color: @syntax-color-function-call;
+
+	.syntax--scss.syntax--at-rule.syntax--mixin &,
+	.syntax--scss.syntax--at-rule.syntax--function & {
+		color: @syntax-color-function;
+	}
+}
+
+.syntax--scss.syntax--mixin {
+	.syntax--variable {
+		color: @syntax-color-parameters;
+	}
+}
+
+.syntax--scss.syntax--extend {
+	color: @syntax-color-class;
+
+	&.syntax--operator {
+		color: @syntax-color-keyword-operator;
+	}
+
+	&.syntax--control {
+		color: @syntax-color-keyword-control;
+	}
+}

@@ -1,0 +1,58 @@
+{
+  "name": "atom-bright-dark-syntax",
+  "description": "A bright dark syntax theme for Atom",
+  "version": "0.0.0",
+  "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
+  "bugs": {
+    "url": "https://github.com/pvdlg/atom-bright-dark-syntax/issues"
+  },
+  "devDependencies": {
+    "@semantic-release/apm-config": "^1.0.4",
+    "semantic-release": "^12.2.2",
+    "stylelint": "^8.3.1",
+    "stylelint-config-xo": "^0.3.0"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "files": [
+    "index.less",
+    "styles",
+    "media"
+  ],
+  "homepage": "https://github.com/pvdlg/atom-bright-dark-syntax#readme",
+  "keywords": [
+    "atom",
+    "code",
+    "css",
+    "dark",
+    "highlight",
+    "syntax",
+    "theme"
+  ],
+  "license": "MIT",
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "trailingComma": "es5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "extends": "@semantic-release/apm-config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pvdlg/atom-bright-dark-syntax.git"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release",
+    "test": "stylelint '**/*.less'"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-xo"
+  },
+  "theme": "syntax"
+}

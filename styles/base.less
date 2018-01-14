@@ -1,0 +1,271 @@
+/* stylelint-disable declaration-no-important */
+
+// TODO await writeFile('release.config.js', `module.exports = ${JSON.stringify(release)}`);
+// JSON.stringify is colored
+
+.syntax--comment {
+	color: @syntax-color-comment;
+	font-style: italic;
+}
+
+.syntax--class {
+	&.syntax--entity {
+		color: @syntax-color-class;
+	}
+}
+
+.syntax--constant {
+	&:not(.syntax--other),
+	&.syntax--support {
+		color: @syntax-color-constant;
+	}
+}
+
+.syntax--numeric {
+	&,
+	&.syntax--constant {
+		color: @syntax-color-numeric;
+	}
+}
+
+.syntax--property-name {
+	color: @syntax-text-property-name;
+}
+
+.syntax--storage {
+	color: @syntax-color-storage;
+}
+
+// Doesn't work properly for if (err.response.body && err.response.body.file === 'not found') {
+.syntax--support {
+	&,
+	&.syntax--variable,
+	& ~ .syntax--object.syntax--property {
+		color: @syntax-color-support;
+
+		&.syntax--property:not(.syntax--object) {
+			color: @syntax-color-property;
+		}
+	}
+
+	&.syntax--property-name {
+		color: #89ddf3;
+	}
+}
+
+.syntax--entity,
+.syntax--instance,
+.syntax--variable.syntax--language {
+	color: @syntax-color-support;
+}
+
+.syntax--attribute-with-value .syntax--attribute-name,
+.syntax--variable-usage .syntax--entity,
+.syntax--variable-usage,
+.syntax--variable-declaration .syntax--entity,
+.syntax--variable-declaration,
+.syntax--variable {
+	color: @syntax-color-variable;
+}
+
+.syntax--parameters {
+	color: @syntax-color-parameters;
+
+	.syntax--variable {
+		color: @syntax-color-parameters;
+	}
+
+	.syntax--comma,
+	.syntax-punctuation,
+	.syntax--operator,
+	.syntax--bracket,
+	.syntax--brace,
+	&.syntax--comma,
+	&.syntax-punctuation,
+	&.syntax--operator,
+	&.syntax--bracket,
+	&.syntax--brace {
+		color: @syntax-color-punctuation;
+	}
+}
+
+.syntax--property {
+	color: @syntax-color-property;
+
+	&.syntax--object {
+		color: @syntax-color-variable;
+	}
+
+	&.syntax--delimiter {
+		color: @syntax-color-punctuation;
+	}
+}
+
+.syntax--support.syntax--function,
+.syntax--entity.syntax--function {
+	color: @syntax-color-function;
+
+	&.syntax--mutator,
+	.syntax--method-call &,
+	.syntax--function-call &,
+	.syntax--mutator.syntax--function & {
+		color: @syntax-color-function-call;
+	}
+}
+
+.syntax--keyword {
+	color: @syntax-color-keyword;
+
+	&.syntax--operator {
+		color: @syntax-color-keyword-operator;
+	}
+
+	&.syntax--control {
+		color: @syntax-color-keyword-control;
+	}
+}
+
+.syntax--modifier {
+	color: @syntax-color-modifier;
+}
+
+.syntax--string {
+	color: @syntax-color-string;
+
+	.syntax--source {
+		color: @syntax-color-punctuation;
+	}
+
+	.syntax--quasi.syntax--punctuation,
+	.syntax--embedded.syntax--section.syntax--punctuation {
+		color: @syntax-color-interpolation;
+	}
+
+	&.syntax--template {
+		.syntax--meta,
+		.syntax--punctuation,
+		.syntax--function,
+		.syntax--support,
+		.syntax--embedded.syntax--source,
+		.syntax--constant,
+		.syntax--numeric,
+		.syntax--entity,
+		.syntax--variable {
+			color: @syntax-color-interpolation-variable !important;
+		}
+	}
+}
+
+.syntax--regexp {
+	&,
+	.syntax--definition.syntax--begin,
+	.syntax--definition.syntax--end {
+		color: @syntax-color-regex-definition;
+	}
+
+	.syntax--regexp {
+		color: @syntax-color-regex;
+	}
+
+	.syntax--constant.syntax--character.syntax--escape,
+	.syntax--string.syntax--regexp.syntax--arbitrary-repetition {
+		color: @syntax-color-regex-escape;
+	}
+
+	&.syntax--character-class {
+		color: @syntax-color-regex-character-class;
+	}
+
+	&.syntax--set,
+	&.syntax--set & {
+		color: @syntax-color-regex-set;
+	}
+}
+
+.syntax--definition,
+.syntax--entity.syntax--name {
+	&.syntax--tag {
+		color: @syntax-color-tag;
+	}
+}
+
+.syntax--markup {
+	.syntax--source {
+		-webkit-font-smoothing: auto;
+	}
+
+	&.syntax--quote {
+		color: @syntax-color-markup-quote;
+		font-style: italic;
+	}
+
+	&.syntax--heading {
+		color: @syntax-color-markup-heading;
+		font-weight: bold;
+	}
+
+	&.syntax--raw {
+		color: @syntax-color-markup-raw;
+	}
+
+	&.syntax--bold {
+		font-weight: bold;
+	}
+
+	&.syntax--italic {
+		font-style: italic;
+	}
+}
+
+// From Stylesheet
+
+// .syntax--definition.syntax--entity.syntax--css {
+// 	color: #e5c07b;
+// }
+//
+// .syntax--string.syntax--definition {
+// 	color: #a8ff60;
+// }
+//
+// .syntax--support.syntax--variable.syntax--property.syntax--dom {
+// 	color: @syntax-color-variable;
+// }
+//
+// .syntax--support.syntax--function,
+// .syntax--entity.syntax--function {
+// 	color: #e48189;
+// }
+//
+// .syntax--property-value .syntax--support.syntax--function {
+// 	color: inherit;
+// }
+//
+// .syntax--comment.syntax--definition,
+// .syntax--comment {
+// 	color: #7c7c7c;
+// }
+//
+// .syntax--string .syntax--constant,
+// .syntax--string .syntax--variable,
+// .syntax--source.syntax--embedded {
+// 	color: #8a9a95;
+// }
+//
+// .syntax--keyword.syntax--definition,
+// .syntax--keyword {
+// 	color: @syntax-color-keyword;
+// }
+//
+// .syntax--object.syntax--key.syntax--js .syntax--unquoted.syntax--js {
+// 	color: @syntax-color-property;
+// 	// color: @syntax-color-constant;
+// }
+//
+// .syntax--brace.syntax--curly.syntax--litobj.syntax--js {
+// 	color: @syntax-color-property;
+// 	// color: @syntax-color-constant;
+// }
+//
+// .syntax--object.syntax--key.syntax--js .syntax--unquoted.syntax--js {
+// 	//color: @syntax-color-attribute;
+// }

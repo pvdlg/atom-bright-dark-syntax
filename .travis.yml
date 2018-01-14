@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+  - node
+
+services:
+  - docker
+
+addons:
+  apt:
+    packages:
+      - libsecret-1-dev
+
+branches:
+  only:
+    - master
+    - /^greenkeeper.*$/
+
+install:
+  - travis_retry npm install
+  - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
+  - chmod u+x build-package.sh
+  - ./build-package.sh
+  - export PATH=$PATH:~/atom/usr/bin
+
+script:
+  - npm run test
+  - npm run semantic-release
