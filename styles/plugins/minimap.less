@@ -1,0 +1,16 @@
+.minimap .highlight-selected {
+	background: @white;
+}
+
+.minimap .highlight-selected.selected {
+	background: @white;
+}
+
+// stylelint-disable-next-line selector-type-no-unknown
+atom-text-editor-minimap {
+	.minimap-visible-area::after,
+	.minimap-visible-area::after {
+		border: 2px solid rgba(23, 202, 101, 1);
+		background-color: rgba(23, 202, 101, 0.1);
+	}
+}

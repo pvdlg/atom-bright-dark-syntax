@@ -1,0 +1,36 @@
+/* stylelint-disable selector-max-class */
+
+.syntax--sass.syntax--entity.syntax--function,
+.syntax--sass.syntax--support.syntax--function {
+	color: @syntax-color-function-call;
+
+	.syntax--sass.syntax--at-rule.syntax--mixin &,
+	.syntax--sass.syntax--at-rule.syntax--function & {
+		color: @syntax-color-function;
+	}
+}
+
+.syntax--sass.syntax--mixin {
+	.syntax--variable-usage .syntax--entity,
+	.syntax--variable-usage,
+	.syntax--variable-declaration .syntax--entity,
+	.syntax--variable-declaration,
+	.syntax--variable {
+		color: @syntax-color-parameters;
+	}
+}
+
+.syntax--sass.syntax--extend {
+	&,
+	.syntax--variable {
+		color: @syntax-color-class;
+	}
+
+	&.syntax--operator {
+		color: @syntax-color-keyword-operator;
+	}
+
+	&.syntax--control {
+		color: @syntax-color-keyword-control;
+	}
+}

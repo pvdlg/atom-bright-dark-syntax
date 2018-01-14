@@ -1,0 +1,34 @@
+/* stylelint-disable declaration-no-important */
+
+.syntax--gfm {
+	&.syntax--quote {
+		&,
+		.syntax--constant,
+		.syntax--character,
+		.syntax--escape {
+			color: @syntax-color-markup-quote !important;
+			font-style: italic;
+		}
+	}
+
+	&.syntax--table {
+		.syntax--border {
+			color: @syntax-color-markup-table-border;
+		}
+	}
+
+	.syntax--link {
+		.syntax--entity {
+			color: @syntax-color-markup-link;
+		}
+
+		.syntax--link {
+			color: @syntax-color-markup-link-url;
+			text-decoration: underline;
+		}
+	}
+
+	&.syntax--list {
+		color: @syntax-color-markup-list;
+	}
+}
