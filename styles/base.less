@@ -1,8 +1,5 @@
 /* stylelint-disable declaration-no-important */
 
-// TODO await writeFile('release.config.js', `module.exports = ${JSON.stringify(release)}`);
-// JSON.stringify is colored
-
 .syntax--comment {
 	color: @syntax-color-comment;
 	font-style: italic;
@@ -36,7 +33,6 @@
 	color: @syntax-color-storage;
 }
 
-// Doesn't work properly for if (err.response.body && err.response.body.file === 'not found') {
 .syntax--support {
 	&,
 	&.syntax--variable,
@@ -216,56 +212,3 @@
 		font-style: italic;
 	}
 }
-
-// From Stylesheet
-
-// .syntax--definition.syntax--entity.syntax--css {
-// 	color: #e5c07b;
-// }
-//
-// .syntax--string.syntax--definition {
-// 	color: #a8ff60;
-// }
-//
-// .syntax--support.syntax--variable.syntax--property.syntax--dom {
-// 	color: @syntax-color-variable;
-// }
-//
-// .syntax--support.syntax--function,
-// .syntax--entity.syntax--function {
-// 	color: #e48189;
-// }
-//
-// .syntax--property-value .syntax--support.syntax--function {
-// 	color: inherit;
-// }
-//
-// .syntax--comment.syntax--definition,
-// .syntax--comment {
-// 	color: #7c7c7c;
-// }
-//
-// .syntax--string .syntax--constant,
-// .syntax--string .syntax--variable,
-// .syntax--source.syntax--embedded {
-// 	color: #8a9a95;
-// }
-//
-// .syntax--keyword.syntax--definition,
-// .syntax--keyword {
-// 	color: @syntax-color-keyword;
-// }
-//
-// .syntax--object.syntax--key.syntax--js .syntax--unquoted.syntax--js {
-// 	color: @syntax-color-property;
-// 	// color: @syntax-color-constant;
-// }
-//
-// .syntax--brace.syntax--curly.syntax--litobj.syntax--js {
-// 	color: @syntax-color-property;
-// 	// color: @syntax-color-constant;
-// }
-//
-// .syntax--object.syntax--key.syntax--js .syntax--unquoted.syntax--js {
-// 	//color: @syntax-color-attribute;
-// }
