@@ -7,7 +7,7 @@
     "url": "https://github.com/pvdlg/atom-bright-dark-syntax/issues"
   },
   "devDependencies": {
-    "@semantic-release/apm-config": "^5.0.0",
+    "@semantic-release/apm-config": "^6.0.1",
     "semantic-release": "^15.0.0",
     "stylelint": "^9.8.0",
     "stylelint-config-xo": "^0.11.0"
