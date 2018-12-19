@@ -10,7 +10,7 @@
     "@semantic-release/apm-config": "^6.0.1",
     "semantic-release": "^15.0.0",
     "stylelint": "^9.8.0",
-    "stylelint-config-xo": "^0.11.0"
+    "stylelint-config-xo": "^0.12.0"
   },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
