@@ -1,7 +1,7 @@
 {
   "name": "atom-bright-dark-syntax",
   "description": "A bright dark syntax theme for Atom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
   "bugs": {
     "url": "https://github.com/pvdlg/atom-bright-dark-syntax/issues"
